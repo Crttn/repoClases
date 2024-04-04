@@ -163,7 +163,7 @@ public class practica42 {
                     "║ ║╠═╝║  ║║ ║║║║║╣ ╚═╗\r\n" + //
                     "╚═╝╩  ╚═╝╩╚═╝╝╚╝╚═╝╚═╝\r\n" + //
                     "");
-            System.out.println("\n1) Ver cartelera     2) Ver asientos disponibles     3) Comprar asientos     4) Cancelar compra");
+            System.out.println("\n1) Ver cartelera     2) Ver asientos disponibles     3) Comprar asientos     4) Cancelar compra     5) Salir");
             System.out.print("\nEscoge una de las opciones anteriores: ");
 
             int opcion = sc.nextInt();
@@ -328,6 +328,13 @@ public class practica42 {
                             sala4.cancelarCompra(filaCancelar, columnaCancelar);
                             sala4.imprimirAsientos();
                         }
+                    break;
+                    // Salir
+                    case 5:
+                    return; 
+                    // Opcion inexistente
+                    default:
+                        System.out.println("Opción desconocida");
                     break;
             }       
         }
