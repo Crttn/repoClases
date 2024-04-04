@@ -7,11 +7,11 @@ _  _, _/_  /___  _  ___ |  /_/ /_  /  / / _  /___
 
 Instrucciones para el uso del programa:
 
-	Con la primera opción puedes uscar un DNI dentro del documento adjunto
+	Con la primera opción puedes buscar un DNI dentro del documento adjunto.
 
-	Con la segunda opción puedes con sultar todo el listado de datos que contiene el documento adjunto
+	Con la segunda opción puedes consultar todo el listado de datos que contiene el documento adjunto.
 
-	Con la tercera opción puedes salir del programa 
+	Con la tercera opción puedes salir del programa.
 
 
 Si no se introducen los datos con el fomato requerido, se le pedirá al usuario introducirlo de nuevo.
