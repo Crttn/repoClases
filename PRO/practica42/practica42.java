@@ -132,7 +132,8 @@ public class practica42 {
         practica42.Sala sala3 = cine.new Sala(3, "FNAF");
         practica42.Sala sala4 = cine.new Sala(4, "The Witcher");
 
-        String[] listaInvitadosEstreno = { "Antonio", "Jose", "Chema" };
+        String[] listaReservaEspecial = { "Antonio", "Jose", "Chema" };
+        String[] listaReservaPrivada = { "Paco", "Andres", "Alex" };
 
         Scanner sc = new Scanner(System.in);
 
@@ -260,13 +261,12 @@ public class practica42 {
                             System.out.print("\nIntroduzca su nombre: ");
                             String nombreInvitado = sc.nextLine();
                             boolean encontrado = false;
-                            for (String nombre : listaInvitadosEstreno) {
+                            for (String nombre : listaReservaEspecial) {
                                 if (nombre.equals(nombreInvitado)) {
                                     encontrado = true;
                                     break;
                                 }
                             }
-
                             if (encontrado) {
                                 sala4.imprimirAsientos();
                                 System.out.print("\nSelecciona la fila: ");
@@ -289,16 +289,19 @@ public class practica42 {
                         if (salaPrivada == 1) {
                             if (sala1.verificarSalaPrivada() == true) {
                                 sala1.reservarSalaPrivada();
+                                System.out.println("Has reservado la sala " + sala1.getId());
                                 sala1.imprimirAsientos();
                             }
                         } else if (salaPrivada == 2) {
                             if (sala2.verificarSalaPrivada() == true) {
                                 sala2.reservarSalaPrivada();
+                                System.out.println("Has reservado la sala " + sala2.getId());
                                 sala2.imprimirAsientos();
                             }
                         } else if (salaPrivada == 3) {
                             if (sala3.verificarSalaPrivada() == true) {
                                 sala3.reservarSalaPrivada();
+                                System.out.println("Has reservado la sala " + sala1.getId());
                                 sala3.imprimirAsientos();
                             }
                         } else {
