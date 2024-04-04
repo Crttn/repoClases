@@ -292,9 +292,15 @@ public class practica42 {
                                 sala1.imprimirAsientos();
                             }
                         } else if (salaPrivada == 2) {
-
+                            if (sala2.verificarSalaPrivada() == true) {
+                                sala2.reservarSalaPrivada();
+                                sala2.imprimirAsientos();
+                            }
                         } else if (salaPrivada == 3) {
-                            
+                            if (sala3.verificarSalaPrivada() == true) {
+                                sala3.reservarSalaPrivada();
+                                sala3.imprimirAsientos();
+                            }
                         } else {
 
                         }
