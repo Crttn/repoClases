@@ -1,4 +1,3 @@
-package PRO.practica42;
 
 import java.util.Scanner;
 
@@ -84,7 +83,8 @@ public class practica42 {
         private void cancelarCompra(int fila, int columna) {
             if (verificarAsiento(fila, columna) == false) {
                 sala[fila][columna] = "\033[32mD\33[0m";
-                System.out.println("Has cancelado la compra de tu asiento en la " + fila + " y columna " + columna + " de la sala " + this.id);
+                System.out.println("Has cancelado la compra de tu asiento en la " + fila + " y columna " + columna
+                        + " de la sala " + this.id);
             } else {
                 System.out.println("El asiento no estaba reservado");
             }
@@ -107,8 +107,8 @@ public class practica42 {
             for (int i = 0; i < sala.length; i++) {
                 for (int j = 0; j < sala[0].length; j++) {
                     if (sala[i][j].equalsIgnoreCase("X")) {
-                      return false;
-                    } 
+                        return false;
+                    }
                 }
             }
             return true;
@@ -125,6 +125,14 @@ public class practica42 {
         }
     }
 
+    private static void separador() {
+        System.out.println("-------------" +
+                "--------------------------------" +
+                "--------------------------------" +
+                "--------------------------------" +
+                "----------------");
+    }
+
     public static void main(String[] args) {
         practica42 cine = new practica42();
         practica42.Sala sala1 = cine.new Sala(1, "Spiderman");
@@ -137,7 +145,8 @@ public class practica42 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\r\n" + //
+        separador();
+        System.out.print("\r\n" + //
                 "  /$$$$$$  /$$$$$$ /$$   /$$ /$$$$$$$$  /$$$$$$         /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$       /$$$$$$  /$$$$$$ \r\n"
                 + //
                 " /$$__  $$|_  $$_/| $$$ | $$| $$_____/ /$$__  $$       /$$__  $$| $$  | $$| $$__  $$| $$_____/| $$      |_  $$_/ /$$__  $$\r\n"
@@ -159,6 +168,7 @@ public class practica42 {
                 "");
 
         while (true) {
+            separador();
             System.out.print("\r\n" + //
                     "╔═╗╔═╗╔═╗╦╔═╗╔╗╔╔═╗╔═╗\r\n" + //
                     "║ ║╠═╝║  ║║ ║║║║║╣ ╚═╗\r\n" + //
@@ -171,6 +181,7 @@ public class practica42 {
             switch (opcion) {
                 // Ver cartelera
                 case 1:
+                    separador();
                     System.out.print("\r\n" + //
                             "╔═╗╔═╗╦═╗╔╦╗╔═╗╦  ╔═╗╦═╗╔═╗\r\n" + //
                             "║  ╠═╣╠╦╝ ║ ║╣ ║  ║╣ ╠╦╝╠═╣\r\n" + //
@@ -183,6 +194,7 @@ public class practica42 {
                     break;
                 // Ver asientos disponibles
                 case 2:
+                    separador();
                     System.out.print("\r\n" + //
                             "╔═╗╔═╗╦╔═╗╔╗╔╔╦╗╔═╗╔═╗\r\n" + //
                             "╠═╣╚═╗║║╣ ║║║ ║ ║ ║╚═╗\r\n" + //
@@ -203,12 +215,24 @@ public class practica42 {
                     break;
                 // Comprar asientos
                 case 3:
+                    separador();
+                    System.out.print("\r\n" + //
+                    "╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗  ╔╦╗╔═╗  ╔═╗╔═╗╦╔═╗╔╗╔╔╦╗╔═╗╔═╗\r\n" + //
+                    "║  ║ ║║║║╠═╝╠╦╝╠═╣   ║║║╣   ╠═╣╚═╗║║╣ ║║║ ║ ║ ║╚═╗\r\n" + //
+                    "╚═╝╚═╝╩ ╩╩  ╩╚═╩ ╩  ═╩╝╚═╝  ╩ ╩╚═╝╩╚═╝╝╚╝ ╩ ╚═╝╚═╝\r\n" + //
+                    "");
                     System.out.println("\nTipos de reserva: ");
                     System.out.println("\n1) Reserva normal     2) Reserva Especial     3) Reserva Privada");
                     System.out.print("\nEscoje el tipo de reserva: ");
                     int tipoReserva = sc.nextInt();
 
                     if (tipoReserva == 1) {
+                        separador();
+                        System.out.print("\r\n" + //
+                        "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔╗╔╔═╗╦═╗╔╦╗╔═╗╦  \r\n" + //
+                        "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ║║║║ ║╠╦╝║║║╠═╣║  \r\n" + //
+                        "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╝╚╝╚═╝╩╚═╩ ╩╩ ╩╩═╝\r\n" + //
+                        "");
                         System.out.print("\nElige la sala para ver sus asientos: ");
                         int eleccion1 = sc.nextInt();
                         System.out.print("\nElige la cantidad de asientos a comprar: ");
@@ -254,6 +278,11 @@ public class practica42 {
                             sala3.imprimirAsientos();
                         }
                     } else if (tipoReserva == 2) {
+                        separador();
+                            System.out.println("\r\n" + //
+                            "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╦  \r\n" + //
+                            "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ║╣ ╚═╗╠═╝║╣ ║  ║╠═╣║  \r\n" + //
+                            "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╚═╝╚═╝╩  ╚═╝╚═╝╩╩ ╩╩═╝");
                         System.out.print("\nElige la sala para ver sus asientos: ");
                         int eleccion1 = sc.nextInt();
                         sc.nextLine();
@@ -283,6 +312,11 @@ public class practica42 {
                         
                     } else {
                         // Tipo de reserva privada
+                        separador();
+                        System.out.print("\r\n" + //
+                            "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔═╗╦═╗╦╦  ╦╔═╗╔╦╗╔═╗\r\n" + //
+                            "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ╠═╝╠╦╝║╚╗╔╝╠═╣ ║║╠═╣\r\n" + //
+                            "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╩  ╩╚═╩ ╚╝ ╩ ╩═╩╝╩ ╩");
                         System.out.println("Selecciona la sala: ");
                         int salaPrivada = sc.nextInt();
 
@@ -311,11 +345,16 @@ public class practica42 {
                     break;
                     // Cancelar compra
                     case 4:
-                        System.out.println("Para cancelar la compra introduce la sala: ");
+                        separador();
+                        System.out.println("\r\n" + //
+                            "╔═╗╔═╗╔╗╔╔═╗╔═╗╦  ╔═╗╦═╗  ╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗\r\n" + //
+                            "║  ╠═╣║║║║  ║╣ ║  ╠═╣╠╦╝  ║  ║ ║║║║╠═╝╠╦╝╠═╣\r\n" + //
+                            "╚═╝╩ ╩╝╚╝╚═╝╚═╝╩═╝╩ ╩╩╚═  ╚═╝╚═╝╩ ╩╩  ╩╚═╩ ╩");
+                        System.out.println("\nPara cancelar la compra introduce la sala: ");
                         int salaCancelar = sc.nextInt();
-                        System.out.println("Introduce la fila: ");
+                        System.out.print("\nIntroduce la fila: ");
                         int filaCancelar = sc.nextInt();
-                        System.out.println("Introduce la columna: ");
+                        System.out.print("\nIntroduce la columna: ");
                         int columnaCancelar = sc.nextInt();
                         
                         if(salaCancelar == 1) {
