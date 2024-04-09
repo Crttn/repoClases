@@ -1,5 +1,5 @@
-
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class practica42 {
 
@@ -224,6 +224,11 @@ public class practica42 {
             System.out.println("\n" + mensaje);
             return sc.nextInt();
         }
+
+        private static String obtenerTetxo(Scanner sc, String mensaje) {
+            System.out.println("\n" + mensaje);
+            return sc.nextLine();
+        }
     }
 
     public static void main(String[] args) {
@@ -234,7 +239,7 @@ public class practica42 {
         practica42.Sala sala4 = cine.new Sala(4, "The Witcher");
 
         String[] listaReservaEspecial = { "Antonio", "Jose", "Chema" };
-        String[] listaReservaPrivada = { "Paco", "Andres", "Alex" };
+        ArrayList<String> listaReservaPrivada = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
 
@@ -278,7 +283,7 @@ public class practica42 {
                     estetica.imprimirCompra();
                     int tipoReserva = estetica.imprimirTiposReserva(sc);
 
-                    if (tipoReserva == 1) {
+                    if (tipoReserva == 1) { // RESERVA NORMAL
                         estetica.imprimirSeparador();
                         estetica.imprimirReservaNormal();
 
@@ -319,7 +324,7 @@ public class practica42 {
                             }
                             sala3.imprimirAsientos();
                         }
-                    } else if (tipoReserva == 2) {
+                    } else if (tipoReserva == 2) { // RESERVA ESPECIAL
                         estetica.imprimirSeparador();
                         estetica.imprimirReservaespecial();
                         int eleccion1 = estetica.obtenerEleccion(sc, "Elige la sala para ver sus asientos: ");
@@ -346,8 +351,7 @@ public class practica42 {
                             }
                         }
 
-                    } else {
-                        // Tipo de reserva privada
+                    } else { //RESERVA PRIVADA
                         estetica.imprimirSeparador();
                         estetica.imprimirReservaPrivada();
                         int salaPrivada = estetica.obtenerEleccion(sc, "Selecciona la sala: ");
@@ -357,18 +361,36 @@ public class practica42 {
                                 sala1.reservarSalaPrivada();
                                 System.out.println("Has reservado la sala " + sala1.getId());
                                 sala1.imprimirAsientos();
+                                int numPersonas = estetica.obtenerEleccion(sc, "Introduce el número de personas que van a asistir");
+                                sc.nextLine();
+                                for (int i = 0; i < numPersonas; i++) {
+                                   String invitado = estetica.obtenerTetxo(sc,"Introduce el nombre del invitado");
+                                   listaReservaPrivada.add(invitado);
+                                }
                             }
                         } else if (salaPrivada == 2) {
                             if (sala2.verificarSalaPrivada() == true) {
                                 sala2.reservarSalaPrivada();
                                 System.out.println("Has reservado la sala " + sala2.getId());
                                 sala2.imprimirAsientos();
+                                int numPersonas = estetica.obtenerEleccion(sc, "Introduce el número de personas que van a asistir");
+                                sc.nextLine();
+                                for (int i = 0; i < numPersonas; i++) {
+                                   String invitado = estetica.obtenerTetxo(sc,"Introduce el nombre del invitado");
+                                   listaReservaPrivada.add(invitado);
+                                }
                             }
                         } else if (salaPrivada == 3) {
                             if (sala3.verificarSalaPrivada() == true) {
                                 sala3.reservarSalaPrivada();
                                 System.out.println("Has reservado la sala " + sala1.getId());
                                 sala3.imprimirAsientos();
+                                int numPersonas = estetica.obtenerEleccion(sc, "Introduce el número de personas que van a asistir");
+                                sc.nextLine();
+                                for (int i = 0; i < numPersonas; i++) {
+                                   String invitado = estetica.obtenerTetxo(sc,"Introduce el nombre del invitado");
+                                   listaReservaPrivada.add(invitado);
+                                }
                             }
                         } else {
 
