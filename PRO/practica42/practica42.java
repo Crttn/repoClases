@@ -125,12 +125,105 @@ public class practica42 {
         }
     }
 
-    private static void separador() {
-        System.out.println("-------------" +
-                "--------------------------------" +
-                "--------------------------------" +
-                "--------------------------------" +
-                "----------------");
+    class estetica {
+
+        private static void imprimirNombre() {
+            System.out.print("\r\n" + //
+                    "  /$$$$$$  /$$$$$$ /$$   /$$ /$$$$$$$$  /$$$$$$         /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$       /$$$$$$  /$$$$$$ \r\n" + //
+                    " /$$__  $$|_  $$_/| $$$ | $$| $$_____/ /$$__  $$       /$$__  $$| $$  | $$| $$__  $$| $$_____/| $$      |_  $$_/ /$$__  $$\r\n" + //
+                    "| $$  \\__/  | $$  | $$$$| $$| $$      | $$  \\__/      | $$  \\ $$| $$  | $$| $$  \\ $$| $$      | $$        | $$  | $$  \\ $$\r\n" + //
+                    "| $$        | $$  | $$ $$ $$| $$$$$   |  $$$$$$       | $$$$$$$$| $$  | $$| $$$$$$$/| $$$$$   | $$        | $$  | $$  | $$\r\n" + //
+                    "| $$        | $$  | $$  $$$$| $$__/    \\____  $$      | $$__  $$| $$  | $$| $$__  $$| $$__/   | $$        | $$  | $$  | $$\r\n" + //
+                    "| $$    $$  | $$  | $$\\  $$$| $$       /$$  \\ $$      | $$  | $$| $$  | $$| $$  \\ $$| $$      | $$        | $$  | $$  | $$\r\n" + //
+                    "|  $$$$$$/ /$$$$$$| $$ \\  $$| $$$$$$$$|  $$$$$$/      | $$  | $$|  $$$$$$/| $$  | $$| $$$$$$$$| $$$$$$$$ /$$$$$$|  $$$$$$/\r\n" + //
+                    " \\______/ |______/|__/  \\__/|________/ \\______/       |__/  |__/ \\______/ |__/  |__/|________/|________/|______/ \\______/ \r\n" + //
+                    "                                                                                                                          \r\n" + //
+                    "");
+        }
+
+        public static void imprimirOpciones() {
+            System.out.print("\r\n" + //
+                    "╔═╗╔═╗╔═╗╦╔═╗╔╗╔╔═╗╔═╗\r\n" + //
+                    "║ ║╠═╝║  ║║ ║║║║║╣ ╚═╗\r\n" + //
+                    "╚═╝╩  ╚═╝╩╚═╝╝╚╝╚═╝╚═╝\r\n" + "");
+        }
+
+        private static int imprimirTiposOpciones(Scanner sc) {
+            System.out.println(
+                    "\n1) Ver cartelera     2) Ver asientos disponibles     3) Comprar asientos     4) Cancelar compra     5) Salir");
+            System.out.print("\nEscoge una de las opciones anteriores: ");
+            int opcion = 0;
+            return opcion = sc.nextInt();
+        }
+
+        private static void imprimirCartelera() {
+            System.out.print("\r\n" + //
+                    "╔═╗╔═╗╦═╗╔╦╗╔═╗╦  ╔═╗╦═╗╔═╗\r\n" + //
+                    "║  ╠═╣╠╦╝ ║ ║╣ ║  ║╣ ╠╦╝╠═╣\r\n" + //
+                    "╚═╝╩ ╩╩╚═ ╩ ╚═╝╩═╝╚═╝╩╚═╩ ╩");
+        }
+
+        private static void imprimrAsientos() {
+            System.out.print("\r\n" + //
+                    "╔═╗╔═╗╦╔═╗╔╗╔╔╦╗╔═╗╔═╗\r\n" + //
+                    "╠═╣╚═╗║║╣ ║║║ ║ ║ ║╚═╗\r\n" + //
+                    "╩ ╩╚═╝╩╚═╝╝╚╝ ╩ ╚═╝╚═╝");
+        }
+
+        private static void imprimirCompra() {
+            System.out.print("\r\n" + //
+                    "╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗  ╔╦╗╔═╗  ╔═╗╔═╗╦╔═╗╔╗╔╔╦╗╔═╗╔═╗\r\n" + //
+                    "║  ║ ║║║║╠═╝╠╦╝╠═╣   ║║║╣   ╠═╣╚═╗║║╣ ║║║ ║ ║ ║╚═╗\r\n" + //
+                    "╚═╝╚═╝╩ ╩╩  ╩╚═╩ ╩  ═╩╝╚═╝  ╩ ╩╚═╝╩╚═╝╝╚╝ ╩ ╚═╝╚═╝");
+        }
+
+        private static int imprimirTiposReserva(Scanner sc) {
+            System.out.println("\nTipos de reserva: ");
+            System.out.println("\n1) Reserva normal     2) Reserva Especial     3) Reserva Privada");
+            System.out.print("\nEscoje el tipo de reserva: ");
+            int valor = 0;
+            return valor = sc.nextInt();
+        }
+
+        private static void imprimirReservaNormal() {
+            System.out.print("\r\n" + //
+                    "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔╗╔╔═╗╦═╗╔╦╗╔═╗╦  \r\n" + //
+                    "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ║║║║ ║╠╦╝║║║╠═╣║  \r\n" + //
+                    "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╝╚╝╚═╝╩╚═╩ ╩╩ ╩╩═╝");
+        }
+
+        private static void imprimirReservaespecial() {
+            System.out.println("\r\n" + //
+                    "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╦  \r\n" + //
+                    "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ║╣ ╚═╗╠═╝║╣ ║  ║╠═╣║  \r\n" + //
+                    "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╚═╝╚═╝╩  ╚═╝╚═╝╩╩ ╩╩═╝");
+        }
+
+        private static void imprimirReservaPrivada() {
+            System.out.print("\r\n" + //
+                    "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔═╗╦═╗╦╦  ╦╔═╗╔╦╗╔═╗\r\n" + //
+                    "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ╠═╝╠╦╝║╚╗╔╝╠═╣ ║║╠═╣\r\n" + //
+                    "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╩  ╩╚═╩ ╚╝ ╩ ╩═╩╝╩ ╩");
+        }
+
+        private static void imprimirCancelarCompra() {
+            System.out.println("\r\n" + //
+                    "╔═╗╔═╗╔╗╔╔═╗╔═╗╦  ╔═╗╦═╗  ╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗\r\n" + //
+                    "║  ╠═╣║║║║  ║╣ ║  ╠═╣╠╦╝  ║  ║ ║║║║╠═╝╠╦╝╠═╣\r\n" + //
+                    "╚═╝╩ ╩╝╚╝╚═╝╚═╝╩═╝╩ ╩╩╚═  ╚═╝╚═╝╩ ╩╩  ╩╚═╩ ╩");
+        }
+
+        private static void imprimirSeparador() {
+            for (int i = 0; i < 125; i++) {
+                System.out.print("-");
+            }
+            System.out.println("");
+        }
+
+        private static int obtenerEleccion(Scanner sc, String mensaje) {
+            System.out.println("\n" + mensaje);
+            return sc.nextInt();
+        }
     }
 
     public static void main(String[] args) {
@@ -145,48 +238,19 @@ public class practica42 {
 
         Scanner sc = new Scanner(System.in);
 
-        separador();
-        System.out.print("\r\n" + //
-                "  /$$$$$$  /$$$$$$ /$$   /$$ /$$$$$$$$  /$$$$$$         /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$       /$$$$$$  /$$$$$$ \r\n"
-                + //
-                " /$$__  $$|_  $$_/| $$$ | $$| $$_____/ /$$__  $$       /$$__  $$| $$  | $$| $$__  $$| $$_____/| $$      |_  $$_/ /$$__  $$\r\n"
-                + //
-                "| $$  \\__/  | $$  | $$$$| $$| $$      | $$  \\__/      | $$  \\ $$| $$  | $$| $$  \\ $$| $$      | $$        | $$  | $$  \\ $$\r\n"
-                + //
-                "| $$        | $$  | $$ $$ $$| $$$$$   |  $$$$$$       | $$$$$$$$| $$  | $$| $$$$$$$/| $$$$$   | $$        | $$  | $$  | $$\r\n"
-                + //
-                "| $$        | $$  | $$  $$$$| $$__/    \\____  $$      | $$__  $$| $$  | $$| $$__  $$| $$__/   | $$        | $$  | $$  | $$\r\n"
-                + //
-                "| $$    $$  | $$  | $$\\  $$$| $$       /$$  \\ $$      | $$  | $$| $$  | $$| $$  \\ $$| $$      | $$        | $$  | $$  | $$\r\n"
-                + //
-                "|  $$$$$$/ /$$$$$$| $$ \\  $$| $$$$$$$$|  $$$$$$/      | $$  | $$|  $$$$$$/| $$  | $$| $$$$$$$$| $$$$$$$$ /$$$$$$|  $$$$$$/\r\n"
-                + //
-                " \\______/ |______/|__/  \\__/|________/ \\______/       |__/  |__/ \\______/ |__/  |__/|________/|________/|______/ \\______/ \r\n"
-                + //
-                "                                                                                                                          \r\n"
-                + //
-                "");
+        estetica.imprimirSeparador();
+        estetica.imprimirNombre();
 
         while (true) {
-            separador();
-            System.out.print("\r\n" + //
-                    "╔═╗╔═╗╔═╗╦╔═╗╔╗╔╔═╗╔═╗\r\n" + //
-                    "║ ║╠═╝║  ║║ ║║║║║╣ ╚═╗\r\n" + //
-                    "╚═╝╩  ╚═╝╩╚═╝╝╚╝╚═╝╚═╝\r\n" + //
-                    "");
-            System.out.println("\n1) Ver cartelera     2) Ver asientos disponibles     3) Comprar asientos     4) Cancelar compra     5) Salir");
-            System.out.print("\nEscoge una de las opciones anteriores: ");
+            estetica.imprimirSeparador();
+            estetica.imprimirOpciones();
+            int opcion = estetica.imprimirTiposOpciones(sc);
 
-            int opcion = sc.nextInt();
             switch (opcion) {
                 // Ver cartelera
                 case 1:
-                    separador();
-                    System.out.print("\r\n" + //
-                            "╔═╗╔═╗╦═╗╔╦╗╔═╗╦  ╔═╗╦═╗╔═╗\r\n" + //
-                            "║  ╠═╣╠╦╝ ║ ║╣ ║  ║╣ ╠╦╝╠═╣\r\n" + //
-                            "╚═╝╩ ╩╩╚═ ╩ ╚═╝╩═╝╚═╝╩╚═╩ ╩\r\n" + //
-                            "");
+                    estetica.imprimirSeparador();
+                    estetica.imprimirCartelera();
                     System.out.println("\nSala número: " + sala1.getId() + " " + sala1.getPelicula());
                     System.out.println("\nSala número: " + sala2.getId() + " " + sala2.getPelicula());
                     System.out.println("\nSala número: " + sala3.getId() + " " + sala3.getPelicula());
@@ -194,14 +258,9 @@ public class practica42 {
                     break;
                 // Ver asientos disponibles
                 case 2:
-                    separador();
-                    System.out.print("\r\n" + //
-                            "╔═╗╔═╗╦╔═╗╔╗╔╔╦╗╔═╗╔═╗\r\n" + //
-                            "╠═╣╚═╗║║╣ ║║║ ║ ║ ║╚═╗\r\n" + //
-                            "╩ ╩╚═╝╩╚═╝╝╚╝ ╩ ╚═╝╚═╝\r\n" + //
-                            "");
-                    System.out.print("\nElige la sala para ver sus asientos: ");
-                    int eleccion = sc.nextInt();
+                    estetica.imprimirSeparador();
+                    estetica.imprimrAsientos();
+                    int eleccion = estetica.obtenerEleccion(sc, "Elige la sala para ver sus asientos: ");
 
                     if (eleccion == 1) {
                         sala1.imprimirAsientos();
@@ -215,28 +274,17 @@ public class practica42 {
                     break;
                 // Comprar asientos
                 case 3:
-                    separador();
-                    System.out.print("\r\n" + //
-                    "╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗  ╔╦╗╔═╗  ╔═╗╔═╗╦╔═╗╔╗╔╔╦╗╔═╗╔═╗\r\n" + //
-                    "║  ║ ║║║║╠═╝╠╦╝╠═╣   ║║║╣   ╠═╣╚═╗║║╣ ║║║ ║ ║ ║╚═╗\r\n" + //
-                    "╚═╝╚═╝╩ ╩╩  ╩╚═╩ ╩  ═╩╝╚═╝  ╩ ╩╚═╝╩╚═╝╝╚╝ ╩ ╚═╝╚═╝\r\n" + //
-                    "");
-                    System.out.println("\nTipos de reserva: ");
-                    System.out.println("\n1) Reserva normal     2) Reserva Especial     3) Reserva Privada");
-                    System.out.print("\nEscoje el tipo de reserva: ");
-                    int tipoReserva = sc.nextInt();
+                    estetica.imprimirSeparador();
+                    estetica.imprimirCompra();
+                    int tipoReserva = estetica.imprimirTiposReserva(sc);
 
                     if (tipoReserva == 1) {
-                        separador();
-                        System.out.print("\r\n" + //
-                        "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔╗╔╔═╗╦═╗╔╦╗╔═╗╦  \r\n" + //
-                        "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ║║║║ ║╠╦╝║║║╠═╣║  \r\n" + //
-                        "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╝╚╝╚═╝╩╚═╩ ╩╩ ╩╩═╝\r\n" + //
-                        "");
-                        System.out.print("\nElige la sala para ver sus asientos: ");
-                        int eleccion1 = sc.nextInt();
-                        System.out.print("\nElige la cantidad de asientos a comprar: ");
-                        int cantiadAsientos = sc.nextInt();
+                        estetica.imprimirSeparador();
+                        estetica.imprimirReservaNormal();
+
+                        int eleccion1 = estetica.obtenerEleccion(sc, "Elige la sala para ver sus asientos: ");
+                        int cantidadAsientos = estetica.obtenerEleccion(sc,
+                                "Elige la cantidad de asientos a comprar: ");
                         sc.nextLine();
                         System.out.print("\nTienes pase especial? S/N: ");
                         String respuesta = sc.nextLine();
@@ -248,43 +296,33 @@ public class practica42 {
                         }
                         if (eleccion1 == 1) {
                             sala1.imprimirAsientos();
-                            for (int i = 0; i < cantiadAsientos; i++) {
-                                System.out.print("\nSelecciona la fila: ");
-                                int fila = sc.nextInt();
-                                System.out.print("\nSelecciona la columna: ");
-                                int columan = sc.nextInt();
+                            for (int i = 0; i < cantidadAsientos; i++) {
+                                int fila = estetica.obtenerEleccion(sc, "Selecciona la fila: ");
+                                int columan = estetica.obtenerEleccion(sc, "Selecciona la columna: ");
                                 sala1.comprarAsientoNormal(fila, columan, paseEspecial);
                             }
                             sala1.imprimirAsientos();
                         } else if (eleccion1 == 2) {
                             sala2.imprimirAsientos();
-                            for (int i = 0; i < cantiadAsientos; i++) {
-                                System.out.print("\nSelecciona la fila: ");
-                                int fila = sc.nextInt();
-                                System.out.print("\nSelecciona la columna: ");
-                                int columan = sc.nextInt();
+                            for (int i = 0; i < cantidadAsientos; i++) {
+                                int fila = estetica.obtenerEleccion(sc, "Selecciona la fila: ");
+                                int columan = estetica.obtenerEleccion(sc, "Selecciona la columna: ");
                                 sala2.comprarAsientoNormal(fila, columan, paseEspecial);
                             }
                             sala2.imprimirAsientos();
                         } else {
                             sala3.imprimirAsientos();
-                            for (int i = 0; i < cantiadAsientos; i++) {
-                                System.out.print("\nSelecciona la fila: ");
-                                int fila = sc.nextInt();
-                                System.out.print("\nSelecciona la columna: ");
-                                int columan = sc.nextInt();
+                            for (int i = 0; i < cantidadAsientos; i++) {
+                                int fila = estetica.obtenerEleccion(sc, "Selecciona la fila: ");
+                                int columan = estetica.obtenerEleccion(sc, "Selecciona la columna: ");
                                 sala3.comprarAsientoNormal(fila, columan, paseEspecial);
                             }
                             sala3.imprimirAsientos();
                         }
                     } else if (tipoReserva == 2) {
-                        separador();
-                            System.out.println("\r\n" + //
-                            "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╦  \r\n" + //
-                            "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ║╣ ╚═╗╠═╝║╣ ║  ║╠═╣║  \r\n" + //
-                            "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╚═╝╚═╝╩  ╚═╝╚═╝╩╩ ╩╩═╝");
-                        System.out.print("\nElige la sala para ver sus asientos: ");
-                        int eleccion1 = sc.nextInt();
+                        estetica.imprimirSeparador();
+                        estetica.imprimirReservaespecial();
+                        int eleccion1 = estetica.obtenerEleccion(sc, "Elige la sala para ver sus asientos: ");
                         sc.nextLine();
                         if (eleccion1 == 4) {
                             System.out.print("\nIntroduzca su nombre: ");
@@ -298,10 +336,8 @@ public class practica42 {
                             }
                             if (encontrado) {
                                 sala4.imprimirAsientos();
-                                System.out.print("\nSelecciona la fila: ");
-                                int fila = sc.nextInt();
-                                System.out.print("\nSelecciona la columna: ");
-                                int columan = sc.nextInt();
+                                int fila = estetica.obtenerEleccion(sc, "Selecciona la fila: ");
+                                int columan = estetica.obtenerEleccion(sc, "Selecciona la columna: ");
                                 sala4.comprarAsientoEspecial(fila, columan);
                                 sala4.imprimirAsientos();
                             } else {
@@ -309,16 +345,12 @@ public class practica42 {
 
                             }
                         }
-                        
+
                     } else {
                         // Tipo de reserva privada
-                        separador();
-                        System.out.print("\r\n" + //
-                            "╦═╗╔═╗╔═╗╔═╗╦═╗╦  ╦╔═╗  ╔═╗╦═╗╦╦  ╦╔═╗╔╦╗╔═╗\r\n" + //
-                            "╠╦╝║╣ ╚═╗║╣ ╠╦╝╚╗╔╝╠═╣  ╠═╝╠╦╝║╚╗╔╝╠═╣ ║║╠═╣\r\n" + //
-                            "╩╚═╚═╝╚═╝╚═╝╩╚═ ╚╝ ╩ ╩  ╩  ╩╚═╩ ╚╝ ╩ ╩═╩╝╩ ╩");
-                        System.out.println("Selecciona la sala: ");
-                        int salaPrivada = sc.nextInt();
+                        estetica.imprimirSeparador();
+                        estetica.imprimirReservaPrivada();
+                        int salaPrivada = estetica.obtenerEleccion(sc, "Selecciona la sala: ");
 
                         if (salaPrivada == 1) {
                             if (sala1.verificarSalaPrivada() == true) {
@@ -343,42 +375,36 @@ public class practica42 {
                         }
                     }
                     break;
-                    // Cancelar compra
-                    case 4:
-                        separador();
-                        System.out.println("\r\n" + //
-                            "╔═╗╔═╗╔╗╔╔═╗╔═╗╦  ╔═╗╦═╗  ╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗\r\n" + //
-                            "║  ╠═╣║║║║  ║╣ ║  ╠═╣╠╦╝  ║  ║ ║║║║╠═╝╠╦╝╠═╣\r\n" + //
-                            "╚═╝╩ ╩╝╚╝╚═╝╚═╝╩═╝╩ ╩╩╚═  ╚═╝╚═╝╩ ╩╩  ╩╚═╩ ╩");
-                        System.out.println("\nPara cancelar la compra introduce la sala: ");
-                        int salaCancelar = sc.nextInt();
-                        System.out.print("\nIntroduce la fila: ");
-                        int filaCancelar = sc.nextInt();
-                        System.out.print("\nIntroduce la columna: ");
-                        int columnaCancelar = sc.nextInt();
-                        
-                        if(salaCancelar == 1) {
-                            sala1.cancelarCompra(filaCancelar, columnaCancelar);
-                            sala1.imprimirAsientos();
-                        } else if (salaCancelar == 2) {
-                            sala2.cancelarCompra(filaCancelar, columnaCancelar);
-                            sala2.imprimirAsientos();
-                        } else if (salaCancelar == 3) {
-                            sala3.cancelarCompra(filaCancelar, columnaCancelar);
-                            sala3.imprimirAsientos();
-                        } else {
-                            sala4.cancelarCompra(filaCancelar, columnaCancelar);
-                            sala4.imprimirAsientos();
-                        }
+                // Cancelar compra
+                case 4:
+                    estetica.imprimirSeparador();
+                    estetica.imprimirCancelarCompra();
+                    int salaCancelar = estetica.obtenerEleccion(sc, "Para cancelar la compra introduce la sala: ");
+                    int filaCancelar = estetica.obtenerEleccion(sc, "Introduce la fila: ");
+                    int columnaCancelar = estetica.obtenerEleccion(sc, "Introduce la columna: ");
+
+                    if (salaCancelar == 1) {
+                        sala1.cancelarCompra(filaCancelar, columnaCancelar);
+                        sala1.imprimirAsientos();
+                    } else if (salaCancelar == 2) {
+                        sala2.cancelarCompra(filaCancelar, columnaCancelar);
+                        sala2.imprimirAsientos();
+                    } else if (salaCancelar == 3) {
+                        sala3.cancelarCompra(filaCancelar, columnaCancelar);
+                        sala3.imprimirAsientos();
+                    } else {
+                        sala4.cancelarCompra(filaCancelar, columnaCancelar);
+                        sala4.imprimirAsientos();
+                    }
                     break;
-                    // Salir
-                    case 5:
-                    return; 
-                    // Opcion inexistente
-                    default:
-                        System.out.println("Opción desconocida");
+                // Salir
+                case 5:
+                    return;
+                // Opcion inexistente
+                default:
+                    System.out.println("Opción desconocida");
                     break;
-            }       
+            }
         }
     }
 }
